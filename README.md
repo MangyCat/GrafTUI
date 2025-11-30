@@ -2,6 +2,8 @@
 
 A TUI application I built with textual for TerminalCraft for making graphs from CSV spreadsheets, and rendering stock graphs, aswell as electronic graphs (555, RC)
 
+[Demo video](https://youtu.be/fofWLLxFQVE)
+
 ![Python 3.14](https://img.shields.io/badge/python-3.14-blue)
 ![License: MIT](https://img.shields.io/badge/license-MIT-green)
 
@@ -155,6 +157,7 @@ This project is licensed under the MIT License - see LICENSE file for details.
 ## End
 
 **Developed for TerminalCraft YSWS using Textual & Python ❤️**
+
 
 
 
