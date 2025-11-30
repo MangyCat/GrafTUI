@@ -71,10 +71,12 @@ class SimulationController: # handles logic
                 freq = float(app.query_one("#rc_freq", Input).value)
                 res = float(app.query_one("#rc_res", Input).value.split(',')[0])
                 data = simulators.calculate_square_wave_response(v_in, c_uf, res, freq)
+                data['freq'] = freq
                 plt, col = SimulationController._prepare_plot(app, f"RC Filter ({freq}Hz)")
                 plt.plot(data["time"], data["input_wave"], label="In", color="green")
                 plt.plot(data["time"], data["output_wave"], label="Out", color=col)
-                app.last_data = data; app.last_mode = "rc_square"
+                app.last_data = data
+                app.last_mode = "rc_square"
 
                 # Stats
                 SimulationController._update_elec_stats(app, data, "rc_square")
@@ -260,4 +262,3 @@ class SimulationController: # handles logic
             return f"Rendered {mode}."
         except (ValueError, KeyError, AttributeError, IndexError) as e:
             return f"Render error: {e}"
-
