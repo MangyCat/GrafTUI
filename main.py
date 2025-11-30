@@ -317,13 +317,16 @@ class GrafTUI(App):
                 key = f"r_{table.row_count}_{ts}"
                 vals = ["New"] + ["0.0"] * (len(table.columns)-1)
                 table.add_row(*vals, key=key)
-            elif op == "add_col" and col_name: #e
+            elif op == "add_col" and col_name:
                 key = f"c_{col_name}_{ts}"
-                table.add_column(col_name, key=key, width=15) #a
+                table.add_column(col_name, key=key, width=15)
                 for rk in table.rows:
-                    table.update_cell(rk, key, "0.0")#c
+                    table.update_cell(rk, key, "0.0")
             elif op == "clear":
-                table.clear() #d
+                table.clear(columns=True)
+                self.gen_data_state["columns"] = ["Label"]
+                self.gen_data_state["rows"] = []
+                table.add_column("Label", key="col_Label")
         except Exception as e:
             self.log_msg(f"editor error {e}")
 
