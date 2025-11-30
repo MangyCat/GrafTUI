@@ -52,7 +52,8 @@ def export_square_wave(data: dict, filename: str = None) -> str:
         filename = get_default_filename("rc_square")
 
     def plot(plt):
-        plt.title(f"RC response ({data['freq']}Hz)")
+        freq = data.get('freq', 'unknown')
+        plt.title(f"RC response ({freq}Hz)")
         plt.plot(data["time"], data["input_wave"], label="Input", color="green", alpha=0.7)
         plt.plot(data["time"], data["output_wave"], label="Output", color="orange")
         plt.legend()
