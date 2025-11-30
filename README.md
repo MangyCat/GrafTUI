@@ -27,7 +27,7 @@ A TUI application I built with textual for TerminalCraft for making graphs from 
   - Line, bar, area, scatter, and pie charts 
   - Support for single and multi-series exports (pie charts only)
 - **Interactive plot rendering**: Real-time visualization with Textual's plotext
-- **Export to PNG**: Save charts in PNG format (1500x900)
+- **Export to PNG**: Save charts in PNG format (1500x750)
 
 ### Workspace
 - **Persistence**: Autosaves data and position when quitting (spreadsheet data, electronic resistor values, etc)
@@ -155,5 +155,6 @@ This project is licensed under the MIT License - see LICENSE file for details.
 ## End
 
 **Developed for TerminalCraft YSWS using Textual & Python ❤️**
+
 
 
