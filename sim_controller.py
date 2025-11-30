@@ -234,7 +234,7 @@ class SimulationController: # handles logic
             else: # other plot types (they take up less lines than the whole pie function)
                 if mode == "bar":
                     try:
-                        plt.multiple_bar(labels, series_data, label=series_names)
+                        plt.multiple_bar(labels, series_data)
                     except (ValueError, AttributeError):
                         plt.multiple_bar(labels, series_data)
                 elif mode == "area":
@@ -260,3 +260,4 @@ class SimulationController: # handles logic
             return f"Rendered {mode}."
         except (ValueError, KeyError, AttributeError, IndexError) as e:
             return f"Render error: {e}"
+
