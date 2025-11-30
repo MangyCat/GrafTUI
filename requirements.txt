@@ -1,0 +1,6 @@
+textual
+textual-plotext
+plotext
+numpy
+matplotlib
+yfinance
