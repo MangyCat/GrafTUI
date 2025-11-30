@@ -95,7 +95,7 @@ Use the navigation bar at the top to switch between modules:
 ## Project Structure
 
 ```
-terminalcraft3/
+GrafTUI/
 ├── main.py                    # Main app.
 ├── views.py                   # UI components
 ├── fin_controller.py          # Financial data fetching and logic
@@ -137,15 +137,13 @@ Data fetching was threaded to keep the UI responsive (UI would lock up, if not t
 - **textual-plotext** - Plotext integration for textual
 
 
-### Data
+### Data and utilties
 - **matplotlib** - Chart generating and exporting
 - **numpy** - Numerical calculations
 - **yfinance** - Yahoo Finance data fetching and processing
 - **pandas** - Data manipulation (implied by yfinance)
 
-### Utilities
 - **requests** - HTTP client for ticker search and fetching
-- Built-in: `json`, `csv`, `os`, `datetime`, `math`, `random`
 
 ---
 
@@ -157,4 +155,5 @@ This project is licensed under the MIT License - see LICENSE file for details.
 ## End
 
 **Developed for TerminalCraft YSWS using Textual & Python ❤️**
+
 
